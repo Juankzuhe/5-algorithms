@@ -1,3 +1,4 @@
+""" Find the k largest(or smallest) elements in an array | Added Min Heap method """
 import heapq as hq
 
 
@@ -29,7 +30,7 @@ first_k_elements_heap(arr, k)
 
 
 def k_largest(arr, k):
-    """Sort the given array arr in reverse order."""
+    """Sort the given array arr in reverse order. O(nk)"""
     arr.sort(reverse=True)
     for i in range(k):
         print(arr[i], end=" ")

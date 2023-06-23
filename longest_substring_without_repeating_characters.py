@@ -1,5 +1,7 @@
+""" Sliding Window algorithm """
+
 def length_of_longest_substring(s: str) -> int:
-    """ Given a string, find the length of the longest substring without repeating characters. """
+    """Given a string, find the length of the longest substring without repeating characters."""
     output = 0
     count = {}
     pos = -1
@@ -9,6 +11,7 @@ def length_of_longest_substring(s: str) -> int:
         count[letter] = index
         output = max(output, index - pos)
     return output
+
 
 string = "abcabcbb"
 print(length_of_longest_substring(string))
